@@ -15,37 +15,61 @@ body {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    position: absolute; 
     text-align: center;
     color: #232323;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px; 
   
     width: 600px;
     height: 80vh;
     max-width: 80%;
-    padding: 10px;
     background-color: #f13a3c;
     border-radius: 5px;
   }
   
-  h4 {
-    font-size: 14px;
+  #questionText {
+    font-size: 20px;
   }
   
-  #startBtn, #leftBtn, #rightBtn {
+  #optionsBtn {
+      padding: 20px;
+  }
+
+/*   #startBtn {
+
+  } */
+  
+  /* Anpassa text till knapparnas storlek.. */
+  #leftBtn, #rightBtn {
     background-color: white;
-  
-  
+/*     opacity: 0.9; */
     border: none;
     color: black;
-    padding: 12px 28px;
+    padding: 32px 38px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 5px;
+    margin: 10px;
   }
-  
+
+  /* Fixa icon med transparent bakgrund */
+  #leftBtn, #rightBtn:hover {
+    cursor: url(./images/hearticon.png), auto;
+  } 
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
   img {
+/*     position:absolute; */
     max-height: 200px;
   }
