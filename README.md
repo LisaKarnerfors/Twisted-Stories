@@ -16,6 +16,8 @@ Börja med att bestämma vad spelet skall handla om och planera sedan gärna ett
 Inlämning 
 För att bli godkänd på den här uppgiften MÅSTE ni använda GIT och GitHub. Inlämningen sker som vanligt via läroplattformen. I din projektmapp ska det finnas (utöver all kod) en README.md fil. Den ska innehålla en titel, beskrivning av projektet, info om hur projektet byggs och körs, samt en länk till GitHub repot. Ni skall även lista alla krav som är uppfyllda i er README.md.
 
+Länk till GitHub repot: https://github.com/LisaKarnerfors/Twisted-Stories-Systemutveckling-ramverk
+
 Presentation 
 Du ska i samband med inlämning hålla en presentation där du inför klassen presenterar ditt spel. Här skall du i samband med en demo och kodgenomgång prata om eventuella utmaningar i ditt arbete, vad som skulle kunna gjorts annorlunda samt hur detta spel skulle kunna byggas vidare. Varje studerande har ca 10 min på sig.
 
