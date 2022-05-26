@@ -1,79 +1,76 @@
 import { GameStep } from "./types"
 import { gameData } from "./gameData"
 
-const textElement = document.querySelector("#questionText") as HTMLElement 
-const leftBtnElement = document.querySelector("#leftBtn") as HTMLElement 
-const rightBtnElement = document.querySelector("#rightBtn") as HTMLElement
-const startBtnElement = document.querySelector("#startBtn") as HTMLElement
+export let textElement = document.querySelector("#question-text") as HTMLElement 
+export let startBtnElement = document.querySelector(".start-btn") as HTMLButtonElement
+export let leftBtnElement = document.querySelector(".left-btn") as HTMLButtonElement 
+export let rightBtnElement = document.querySelector(".right-btn") as HTMLButtonElement
+let imageElement = document.querySelector("#imgage-div") as HTMLImageElement
 
 
-// Variabel för array gameData 
-/* let currentState = gameData[0] 
-console.log(currentState) */
-
-/* startDating - function 
-currentStep()*/
+let currentState = gameData[0] 
 
 
-// Renderar ut frågorna
 export const currentStep: (gameStep: GameStep) => void = (gameStep) => {
 
-  if(!gameStep) {
-    gameStep = gameData[0]
-  }
- 
-  // Skriver ut options samt eventlyssnare
-  leftBtnElement!.textContent = gameStep.options.left!.text
-  leftBtnElement.addEventListener("click", () => { 
-    nextStep(gameStep.options.left!.path) 
-  })
+    textElement.textContent = gameStep.question!
 
-  rightBtnElement!.textContent = gameStep.options.right!.text // kolla detta
-  rightBtnElement.addEventListener("click", () => { 
-    nextStep(gameStep.options.right!.path)
-  }) 
-
-  // Skriver ut frågan
-  textElement!.textContent = gameStep.question!
-
-}
-
-export const nextStep: (id: number) => void = (id) => { 
-  
-  // forEach
-
- /*  gameData.forEach((GameStep) => {
- // ifsats
-    currentStep(nextState) 
-  } */
-
-
-
-  for (let i = 0; i < gameData.length; i++) {
-
-    const nextState = gameData[i];
-      if(nextState.id == id) {
-        currentStep(nextState)       
-      }
+    if(gameStep.options!.left!) {
+      leftBtnElement.textContent = gameStep.options!.left.text 
+    }
+    
+    if(gameStep.options!.right!) { 
+      rightBtnElement.textContent = gameStep.options!.right.text
     }
 
- } 
+    if(gameStep.id == 8) {
+      rightBtnElement.classList.add("hide")
+    } else {
+      rightBtnElement.classList.remove("hide")
+    }
+
+    if(gameStep.id == 7) {
+      leftBtnElement .classList.add("hide")
+      rightBtnElement.classList.add("hide")
+    } 
 
 
- //Video
+    if(gameStep.id == 7) { 
+      let image = document.createElement("img")
+      image.classList.add("image-div")
+      image.src = gameStep.image!
+      imageElement?.append(image)
+  
+    }  
+}
  
-/*  var video = document.getElementById("myVideo");
 
-// Get the button
-var btn = document.getElementById("myBtn");
+    
+  leftBtnElement.addEventListener('click',() => { 
+    nextStep(currentState.options!.left!.path) 
+  });
 
-// Pause and play the video, and change the button text
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-} */
+
+ rightBtnElement.addEventListener('click', () => {
+    nextStep(currentState.options!.right!.path) 
+ });
+
+ 
+const nextStep: (id: number) => void = (id) => {
+
+  for(let i = 0; i < gameData.length; i ++ ) {
+
+    const state = gameData[i];
+
+      if(state.id == id) {
+        currentState = state
+        currentStep(state)
+      }
+    }
+}
+
+
+
+
+
+

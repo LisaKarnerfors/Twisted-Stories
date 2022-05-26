@@ -1,16 +1,26 @@
 import './style.css'
-import { currentStep } from "./gameLogicFunction"
-import { gameData } from './gameData';
-
-/* import { gameData } from './gameData'
-import { GameStep } from './types' */
+import { currentStep, leftBtnElement, rightBtnElement, startBtnElement, textElement } from "./gameLogicFunction"
+import { gameData } from './gameData'
 
 
-// Steg 1 - startar spelet
-const startGame:  () => void = () => {
-  currentStep(gameData[0]); 
 
-}
+startBtnElement.addEventListener("click", () => {
 
-startGame()
+  textElement.textContent = "";
+  startBtnElement.classList.add("hide")
+  leftBtnElement.classList.remove("hide")
+  rightBtnElement.classList.remove("hide")
+
+  currentStep(gameData[0]) 
+
+})
+
+ 
+/* const startDating: () => void = () => {
+
+  /* currentStep(gameData[0]) 
+  startDating() }*/
+/* 
+currentStep */
+
 
