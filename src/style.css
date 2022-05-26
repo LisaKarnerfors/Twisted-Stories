@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 body {
     padding: 0;
@@ -5,49 +11,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    display: flex;
   }
   
-  
-  #container {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+  /* Se över storleken på container */
+  .container {
     position: absolute; 
     text-align: center;
     color: #232323;
     margin-top: 70px;
     margin-bottom: 70px; 
-  
     width: 600px;
-    height: 80vh;
     max-width: 80%;
     background-color: #f13a3c;
     border-radius: 5px;
+    padding: 30px;
   }
   
-  #questionText {
-    font-size: 20px;
+  #question-text {
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    inline-size: 500px;
+    overflow-wrap: break-word;
+}
+  
+  .options-btn {
+    display: grid; 
+    justify-content: center;
+    padding: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(80px, 0.5fr));
   }
   
-  #optionsBtn {
-      padding: 20px;
-  }
-
-/*   #startBtn {
-
-  } */
-  
-  /* Anpassa text till knapparnas storlek.. */
-  #leftBtn, #rightBtn {
+ .left-btn, .right-btn, .start-btn {
     background-color: white;
-/*     opacity: 0.9; */
     border: none;
     color: black;
-    padding: 32px 38px;
+    padding: 28px; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -56,12 +59,11 @@ body {
     margin: 10px;
   }
 
-  /* Fixa icon med transparent bakgrund */
-  #leftBtn, #rightBtn:hover {
+ .left-btn, .right-btn, .start-btn:hover {
     cursor: url(./images/hearticon.png), auto;
   } 
 
-  #myVideo {
+  #myVideo , #img {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -70,6 +72,9 @@ body {
   }
 
   img {
-/*     position:absolute; */
     max-height: 200px;
+  }
+
+  .hide {
+    display: none;
   }
