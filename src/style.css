@@ -15,7 +15,6 @@ body {
     height: 100vh;
   }
   
-  /* Se över storleken på container */
   .container {
     position: absolute; 
     text-align: center;
@@ -26,7 +25,8 @@ body {
     max-width: 80%;
     background-color: #f13a3c;
     border-radius: 5px;
-    padding: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
   
   #question-text {
@@ -37,6 +37,7 @@ body {
     margin-left: 50px;
     inline-size: 500px;
     overflow-wrap: break-word;
+    padding-bottom: 20px;
 }
   
   .options-btn {

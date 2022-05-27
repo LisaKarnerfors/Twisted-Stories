@@ -13,7 +13,7 @@ export const gameData: GameStep [] = [
                 },
               right: { 
                     text: "Nej jag trivs som ungkarl",
-                    path: 8 
+                    path: 9 
                 }
             }
     }, 
@@ -24,7 +24,7 @@ export const gameData: GameStep [] = [
             {
               left: { 
                   text: "Sängen",
-                  path: 8 
+                  path: 9 
               },
               right: {
                   text: "Spela Boul",
@@ -43,13 +43,13 @@ export const gameData: GameStep [] = [
             },
               right: { 
                   text: "Somnar garanterat under bordet",
-                  path: 8
+                  path: 9
             }
         }
     },
     {
         id: 4,
-        question: "Vad gör du helst på första Dejten?",
+        question: "Vad gör du helst på första dejten?",
         options:
             {
               left: { 
@@ -58,7 +58,7 @@ export const gameData: GameStep [] = [
               },
               right: {
                   text: "Går på Bio", 
-                  path: 8
+                  path: 9
             }
         }
     },
@@ -69,7 +69,7 @@ export const gameData: GameStep [] = [
             {
               left: {
                   text: "Pengar, fysisk attraktion, att hen spelar boul ",
-                  path: 8 
+                  path: 9 
               },
               right: {
                   text: "Trygghet, humor & att hen spelar boul",
@@ -89,7 +89,7 @@ export const gameData: GameStep [] = [
               },
               right: {
                   text: "Givetvis dig!",
-                  path: 8
+                  path: 9
             }
         }
  
@@ -97,28 +97,43 @@ export const gameData: GameStep [] = [
     },
     {
         id: 7, 
-        image: "../src/images/bild.png", 
-        question: "Wohooo båda gillar Boul!",
+        question: "Vi har ett resultat... Är du nyfiken på resultatet eller vill du börja om?",
+        options: 
+         {
+              left: {
+                  text: "Jag är sååå nyfiken!!!",
+                  path: 8
+              },
+              right: {
+                  text: "Jag vill börja om!",
+                  path: 1
+            }
+        }
+    },
+    { 
+        id: 8, 
+        image: "../src/images/boul.JPG", 
+        question: "Grattis till den perfekta matchningen! Nu kan ni går vidare till Boulbar! 😍🥳",
         options: 
          {
               left: {
                   text: "",
-                  path: 1
+                  path: 0
               },
               right: {
                   text: "",
-                  path: 1
+                  path: 0
             }
         } 
     
     },
     {  
-        id: 8,
-        question: "Vill du ge speed dejting ett nytt försök??",
+        id: 9,
+        question: "Tyvärr, detta var ingen bra matchning.. 😔 Ge inte upp hoppet på kärleken!",
         options:
             {
               left: {
-                  text: "Börja om här!",
+                  text: "Försök på nytt här!",
                   path: 1
             }
     }
